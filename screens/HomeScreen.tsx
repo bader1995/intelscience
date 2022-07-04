@@ -1,6 +1,5 @@
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import DetailCardComponent from '../components/DetailCardComponent';
-import getCours from '../api/cours';
 import { useEffect, useState } from 'react';
 
 export default function HomeScreen({ navigation }) {
@@ -11,8 +10,8 @@ export default function HomeScreen({ navigation }) {
   {
     try
     {
-      const response = await fetch('https://lyoumapress.com/api_intelscience/index.php');
-      const json = await response.json();
+      const response = await fetch('https://lyoumapress.com/intelscience_api/api.php')
+      const json = await response.json()
 
       setCours(json)
 
@@ -30,8 +29,13 @@ export default function HomeScreen({ navigation }) {
         <View style={styles.insideContainer}>
             <Text style={{ alignSelf: "center", fontSize: 18, marginBottom: 20 }}>Science de la vie et de la terre</Text>
             <View style={{ display: 'flex', flexDirection: 'row' }}>
-              <DetailCardComponent title="La planète Terre, l’environnement et l’action humaine" onPress={() => navigation.navigate("Detail")} />
-              <DetailCardComponent title="Le corps humain et la santé" onPress={() => navigation.navigate("Detail")} />
+              {
+                cours && cours.map(item => {
+                  return (
+                    <DetailCardComponent key={item.Id} title={item.title} onPress={() => navigation.navigate("Detail", {id: item.Id})} />
+                  )
+                })
+              }
             </View>
         </View>
     </ScrollView>

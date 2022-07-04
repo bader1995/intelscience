@@ -22,9 +22,10 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/splash.png",
+        "foregroundImage": "./assets/logo.png",
         "backgroundColor": "#74C004"
-      }
+      },
+      "package": "com.intelscience"
     },
     "web": {
       "favicon": "./assets/logo.png"
