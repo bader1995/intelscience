@@ -28,7 +28,7 @@ export default function HomeScreen({ navigation }) {
     <ScrollView style={styles.container}>
         <View style={styles.insideContainer}>
             <Text style={{ alignSelf: "center", fontSize: 18, marginBottom: 20 }}>Science de la vie et de la terre</Text>
-            <View style={{ display: 'flex', flexDirection: 'row' }}>
+            <View style={{ display: 'flex', flex: 1 }}>
               {
                 cours && cours.map(item => {
                   return (

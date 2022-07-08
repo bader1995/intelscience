@@ -46,16 +46,15 @@ export default function DetailScreen({ route, navigation }) {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#74C004'
+      backgroundColor: '#74C004',
+      height: 5000
     },
     insideContainer: {
       flex: 1,
-      flexDirection: 'column',
       width: '100%',
-      minHeight: 100,
       borderTopLeftRadius: 60,
       borderTopRightRadius: 60,
       backgroundColor: 'white',
-      padding: 30
+      padding: 30,
     }
   });

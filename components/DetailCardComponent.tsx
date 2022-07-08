@@ -18,9 +18,8 @@ const styles = StyleSheet.create({
       borderWidth: 1,
       borderColor: 'black',
       flex: 1,
-      width: 400,
       margin: 10,
       padding: 20,
-      borderRadius: 20
+      borderRadius: 20,
     },
 });
